@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Laubhäufer</title>
+  <title>Laubhaufen 🍂</title>
 
   <style>
     body {
@@ -11,6 +11,7 @@
       color: white;
       height: 100vh;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       font-family: "Trebuchet MS", sans-serif;
@@ -20,18 +21,56 @@
     h1 {
       font-size: 48px;
       letter-spacing: 2px;
+      padding: 20px;
+    }
+
+    button {
+      display: none;
+      background: white;
+      color: black;
+      border: none;
+      padding: 15px 25px;
+      font-size: 20px;
+      border-radius: 12px;
+      cursor: pointer;
+      font-family: "Trebuchet MS", sans-serif;
+    }
+
+    button:hover {
+      transform: scale(1.05);
     }
   </style>
 </head>
 
 <body>
+
   <h1 id="text">hallo laubhäufer</h1>
 
+  <button id="button">KLICK MICH :D</button>
+
   <script>
+    const sprueche = [
+      "Warum bist du hier?",
+      "yippie es hat wirklich funktioniert :D",
+      "lenja mag him",
+      "laub ist cool",
+      "komische website",
+      "Ich kann coden woohoo (nicht)",
+      "ok bye"
+    ];
+
     setTimeout(() => {
       document.getElementById("text").textContent =
-        "Yippie es hat geklappt";
+        "Yippie es hat wirklich funktioniert :D";
+
+      document.getElementById("button").style.display = "block";
     }, 2000);
+
+    document.getElementById("button").addEventListener("click", () => {
+      const zufall = Math.floor(Math.random() * sprueche.length);
+      document.getElementById("text").textContent = sprueche[zufall];
+    });
   </script>
+
 </body>
 </html>
