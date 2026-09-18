@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Laubhäufer</title>
+
+  <style>
+    body {
+      margin: 0;
+      background: black;
+      color: white;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: "Trebuchet MS", sans-serif;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 48px;
+      letter-spacing: 2px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 id="text">hallo laubhäufer</h1>
+
+  <script>
+    setTimeout(() => {
+      document.getElementById("text").textContent =
+        "Yippie es hat geklappt";
+    }, 2000);
+  </script>
+</body>
+</html>
